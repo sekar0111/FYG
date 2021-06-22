@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests">
+  <test name="Facebook"> <!-- thread-count="5" -->
+  <parameter name = "browser" value = "chrome"/>
+  <parameter name = "URL" value = "Facebook"/>
+    <classes>
+      <class name="com.FYR.Test.FbLoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Gmail"> <!-- thread-count="5" -->
+  <parameter name = "browser" value = "chrome"/>
+  <parameter name = "URL" value = "Gmail"/>
+    <classes>
+      <class name="com.FYR.Test.GmailTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Youtube"> <!-- thread-count="5" -->
+  <parameter name = "browser" value = "FF"/>
+  <parameter name = "URL" value = "Youtube"/>
+    <classes>
+      <class name="com.FYR.Test.YouTubeTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

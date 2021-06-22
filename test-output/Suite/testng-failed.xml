@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Facebook(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="URL" value="Facebook"/>
+    <classes>
+      <class name="com.FYR.Test.FbLoginTest">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+          <include name="fbLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.FYR.Test.FbLoginTest -->
+    </classes>
+  </test> <!-- Facebook(failed) -->
+  <test thread-count="5" parallel="tests" name="Youtube(failed)">
+    <parameter name="browser" value="FF"/>
+    <parameter name="URL" value="Youtube"/>
+    <classes>
+      <class name="com.FYR.Test.YouTubeTest">
+        <methods>
+          <include name="doSearch" invocation-numbers="0"/>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.FYR.Test.YouTubeTest -->
+    </classes>
+  </test> <!-- Youtube(failed) -->
+</suite> <!-- Failed suite [Suite] -->
